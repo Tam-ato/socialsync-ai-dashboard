@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialSync AI - Micro-Agency Automation Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🚀 SocialSync <span class="badge">AI Node</span></div>
+        <div class="status">Connected to Open-Weight Layer</div>
+    </header>
+
+    <main class="dashboard-container">
+        <!-- Input Section -->
+        <section class="panel input-panel">
+            <h2>1. Client Raw Intake</h2>
+            <p class="subtitle">Paste the messy, raw client brief or audio transcript below:</p>
+            <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
+            <button class="btn-primary" onclick="simulateAutomation()">Process & Sync Content</button>
+        </section>
+
+        <!-- Structured Outputs Section -->
+        <section class="panel output-panel">
+            <h2>2. Automated Agency Matrix</h2>
+            
+            <div class="tabs">
+                <div class="tab active">Instagram Caption</div>
+                <div class="tab">LinkedIn Sync</div>
+                <div class="tab">Content Schedule</div>
+            </div>
+
+            <div class="output-box" id="outputContent">
+                <p class="placeholder-text">Click "Process & Sync Content" to parse raw brief into structured open-source modules...</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function simulateAutomation() {
+            const output = document.getElementById('outputContent');
+            output.innerHTML = `
+                <div class="result-card">
+                    <h3>📸 Instagram Strategy (Engagement Focus)</h3>
+                    <p>✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
+                    Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
+                    📍 Tag a pastry lover who needs to see this!<br><br>
+                    #CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
