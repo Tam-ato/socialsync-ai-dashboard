@@ -21,16 +21,77 @@
     }
     #campaignResult { margin-top: 28px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.7; }
     #studioStatus { margin-top: 16px; }
+    /* Campaign Studio navigation fix */
+.site-header {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 76px;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf0;
+}
+
+.site-logo {
+  color: #172554;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-logo span {
+  color: #6366f1;
+}
+
+.site-header .site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-header .site-nav a {
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header .site-nav a:hover,
+.site-header .site-nav a[aria-current="page"] {
+  color: #6366f1;
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    padding: 16px 5%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .site-header .site-nav {
+    justify-content: flex-start;
+    gap: 12px 20px;
+  }
+}
   </style>
 </head>
 <body>
-  <header>
-    <nav aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="strategy.html">Campaign Studio</a>
-      <a href="how-it-works.html">How It Works</a>
-    </nav>
-  </header>
+ <header class="site-header">
+  <a class="site-logo" href="index.html">SocialSync <span>AI</span></a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="strategy.html" aria-current="page">Campaign Studio</a>
+    <a href="how-it-works.html">How It Works</a>
+  </nav>
+</header>
 
   <main class="studio">
     <h1>AI Campaign Studio</h1>
