@@ -2,8 +2,7 @@
 
 "use strict";
 
-// Keep this URL in sync with the API_BASE_URL in script.js.
-const API_BASE_URL = "https://socialsync-ai-api.onrender.com/";
+const API_BASE_URL = "https://socialsync-ai-api.onrender.com";
 
 const form = document.querySelector("#campaignForm");
 const status = document.querySelector("#studioStatus");
