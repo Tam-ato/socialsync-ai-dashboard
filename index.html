@@ -3,121 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialSync AI - Enterprise Matrix</title>
+    <title>SocialSync AI - Creative Studio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <!-- Ambient Atmospheric Backdrop -->
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
+    <!-- Playful Floating Organic Shapes -->
+    <div class="blob blob-pink"></div>
+    <div class="blob blob-orange"></div>
 
-    <div class="app-container">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-brand">
-                <div class="brand-glyph"><i class="fa-solid fa-circle-nodes"></i></div>
-                <span>SocialSync <span class="brand-glow">AI</span></span>
+    <div class="app-wrapper">
+        <!-- Agency Top Bar -->
+        <header class="studio-header">
+            <div class="logo-area">
+                <div class="logo-spark"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <span class="logo-text">SocialSync <span class="highlight-text">Studio</span></span>
             </div>
-            <nav class="sidebar-menu">
-                <a href="#" class="menu-item active"><i class="fa-solid fa-square-poll-horizontal"></i> Sync Terminal</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-calendar-days"></i> Content Calendar</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-robot"></i> Model Topology</a>
-                <a href="#" class="menu-item"><i class="fa-solid fa-network-wired"></i> Channel Nodes</a>
-            </nav>
-            <div class="sidebar-footer">
-                <div class="node-status-pill">
-                    <span class="pulse-core"></span>
-                    <span>Gemma-2B Local Cluster</span>
-                </div>
+            <div class="engine-pill">
+                <span class="pulse-beacon"></span>
+                <span>Gemma-2B Creative Engine</span>
             </div>
-        </aside>
+        </header>
 
-        <!-- Main Workspace -->
-        <div class="workspace">
-            <header class="workspace-header">
-                <div class="header-title-block">
-                    <h1>Automated Agency Terminal</h1>
-                    <p>Convert disorganized client strings into fully synchronized social campaigns instantly.</p>
+        <!-- Main Creative Dashboard Layout -->
+        <main class="creative-grid">
+            <!-- Left Side: Input Panel -->
+            <section class="clay-card input-card">
+                <div class="card-headline">
+                    <div class="pill-icon icon-peach"><i class="fa-solid fa-comment-dots"></i></div>
+                    <div>
+                        <h2>Raw Client Voice</h2>
+                        <p class="card-sub">Drop the messy briefs, captions, or voice transcripts here</p>
+                    </div>
                 </div>
-                <div class="network-indicators">
-                    <i class="fa-brands fa-instagram platform-node active"></i>
-                    <i class="fa-brands fa-linkedin platform-node active"></i>
-                    <i class="fa-brands fa-tiktok platform-node active"></i>
+                <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
+                <button class="btn-creative-sync" onclick="generateCreativeMatrix()">
+                    <span>Transform to Campaign Content</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </section>
+
+            <!-- Right Side: Visual Output Board -->
+            <section class="clay-card output-card">
+                <div class="card-headline">
+                    <div class="pill-icon icon-berry"><i class="fa-solid fa-border-all"></i></div>
+                    <div>
+                        <h2>Social Channel Matrix</h2>
+                        <p class="card-sub">Your cross-platform automated content stream</p>
+                    </div>
                 </div>
-            </header>
 
-            <main class="dashboard-grid">
-                <!-- Intake Card -->
-                <section class="glass-card intake-card">
-                    <div class="card-title-bar">
-                        <div class="icon-orb orb-purple"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
-                        <div>
-                            <h2>1. Clean Feed Intake</h2>
-                            <p class="card-desc">Input messy briefs or client recordings</p>
-                        </div>
-                    </div>
-                    <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
-                    <button class="btn-action-glow" onclick="executeSyncPipeline()">
-                        <span>Compile & Sync Across Nodes</span>
-                        <i class="fa-solid fa-shuffle"></i>
-                    </button>
-                </section>
+                <div class="matrix-tabs-row">
+                    <button class="matrix-tab active" id="instaTab" onclick="switchTab('insta')"><i class="fa-brands fa-instagram"></i> Instagram</button>
+                    <button class="matrix-tab" id="linkdTab" onclick="switchTab('linkd')"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
+                </div>
 
-                <!-- Output Matrix Card -->
-                <section class="glass-card matrix-card">
-                    <div class="card-title-bar">
-                        <div class="icon-orb orb-blue"><i class="fa-solid fa-diagram-project"></i></div>
-                        <div>
-                            <h2>2. Synced Platform Matrix</h2>
-                            <p class="card-desc">Real-time localized compilation outputs</p>
-                        </div>
+                <div class="workspace-viewport" id="viewportDisplay">
+                    <div class="empty-creative-state">
+                        <i class="fa-solid fa-palette floating-palette"></i>
+                        <p>Awaiting client intake string to spin up your marketing assets...</p>
                     </div>
-                    
-                    <div class="matrix-tabs">
-                        <button class="tab-button active" onclick="switchMatrixTab(event, 'insta')"><i class="fa-brands fa-instagram"></i> Instagram</button>
-                        <button class="tab-button" onclick="switchMatrixTab(event, 'linkd')"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
-                    </div>
-
-                    <div class="matrix-viewport" id="matrixOutput">
-                        <div class="visual-placeholder">
-                            <i class="fa-solid fa-satellite-dish radar-pulse"></i>
-                            <p>Awaiting intake stream authorization parameters...</p>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script>
-        function executeSyncPipeline() {
-            const viewport = document.getElementById('matrixOutput');
-            viewport.innerHTML = `
-                <div class="deployment-module animate-slide-up">
-                    <div class="deployment-header">
-                        <span class="channel-route"><i class="fa-brands fa-instagram"></i> /root/instagram_feed</span>
-                        <span class="token-metric">Optimal Weight Balance</span>
+        function generateCreativeMatrix() {
+            const display = document.getElementById('viewportDisplay');
+            display.innerHTML = `
+                <div class="instagram-preview-card animate-pop">
+                    <div class="preview-header">
+                        <div class="preview-avatar"><i class="fa-solid fa-store"></i></div>
+                        <div class="preview-user">
+                            <strong>your.client.cafe</strong>
+                            <span>Sponsored • Campaign Node</span>
+                        </div>
                     </div>
-                    <div class="deployment-body">
-                        <p class="compiled-caption">
-                            ✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
-                            Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
-                            📍 Tag a pastry lover who needs to see this!<br><br>
-                            <span class="hashtag-highlight">#CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</span>
+                    <div class="preview-content-box">
+                        <p>✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
+                        Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
+                        📍 Tag a pastry lover who needs to see this!<br><br>
+                        <span class="instagram-tags">#CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</span>
                         </p>
                     </div>
-                    <div class="deployment-actions">
-                        <button class="btn-secondary" onclick="alert('Asset copied to clipboard!')"><i class="fa-regular fa-copy"></i> Copy Strategy</button>
+                    <div class="preview-footer-actions">
+                        <button class="btn-copy-asset" onclick="alert('Strategy copied to clipboard!')"><i class="fa-regular fa-copy"></i> Copy Content Block</button>
                     </div>
                 </div>
             `;
         }
 
-        function switchMatrixTab(event, nodeType) {
-            const tabs = document.querySelectorAll('.tab-button');
-            tabs.forEach(t => t.classList.remove('active'));
-            event.currentTarget.classList.add('active');
+        function switchTab(platform) {
+            document.querySelectorAll('.matrix-tab').forEach(btn => btn.classList.remove('active'));
+            if(platform === 'insta') document.getElementById('instaTab').classList.add('active');
+            if(platform === 'linkd') document.getElementById('linkdTab').classList.add('active');
         }
     </script>
 </body>
