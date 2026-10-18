@@ -1,6 +1,6 @@
 
 "use strict";
-const API_BASE_URL = "https://socialsync-ai-api.onrender.com/";
+const API_BASE_URL = "https://socialsync-ai-api.onrender.com";
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
