@@ -1,104 +1,352 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialSync AI - Creative Studio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#35121c">
+  <meta name="description" content="SocialSync Studio helps businesses find the right social platforms and create platform-specific marketing campaigns.">
+  <title>SocialSync Studio — Make Every Post Count</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-    <!-- Playful Floating Organic Shapes -->
-    <div class="blob blob-pink"></div>
-    <div class="blob blob-orange"></div>
+  <div class="site-shell">
 
-    <div class="app-wrapper">
-        <!-- Agency Top Bar -->
-        <header class="studio-header">
-            <div class="logo-area">
-                <div class="logo-spark"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                <span class="logo-text">SocialSync <span class="highlight-text">Studio</span></span>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="SocialSync Studio home">
+        <span class="brand-mark">S<span>✳</span></span>
+        <span class="brand-name">socialsync<span>studio</span></span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html">Studio</a>
+        <a class="nav-link" href="strategy.html">Strategy Lab</a>
+        <a class="nav-link" href="how-it-works.html">How it works</a>
+      </nav>
+
+      <a class="header-cta" href="#business-setup">Build my strategy <span>↗</span></a>
+
+      <button class="mobile-menu-button" id="mobileMenuButton"
+        aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> YOUR BUSINESS. YOUR VOICE. YOUR STRATEGY.</div>
+
+          <h1>Don't just post.<br>Make every post <em>count.</em></h1>
+
+          <p class="hero-description">
+            Your business deserves more than copy-paste captions.
+            Discover the right platforms, find your content style,
+            and turn everyday ideas into thoughtful campaigns.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#business-setup">Find my social strategy <span>↗</span></a>
+            <a class="text-link" href="how-it-works.html">Get to know SocialSync <span>→</span></a>
+          </div>
+
+          <div class="hero-footnote">
+            <span class="mini-stars">✳ ✳ ✳</span>
+            Made for growing businesses, not one-size-fits-all marketing.
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Illustration of a social media campaign workspace">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+
+          <div class="art-topline">
+            <span>THE CREATIVE DESK</span>
+            <span>VOL. 01 / 2026</span>
+          </div>
+
+          <div class="art-poster">
+            <div class="poster-kicker">A LITTLE MORE INTENTION</div>
+            <div class="poster-title">Good ideas<br>deserve to<br><em>be seen.</em></div>
+            <div class="poster-sun"></div>
+            <div class="poster-ribbon">IDEA → STORY → CONNECTION</div>
+            <div class="poster-bottom">
+              <span>YOUR NEXT CAMPAIGN</span>
+              <span>SS—001</span>
             </div>
-            <div class="engine-pill">
-                <span class="pulse-beacon"></span>
-                <span>Gemma-2B Creative Engine</span>
+          </div>
+
+          <div class="floating-note note-instagram">
+            <span class="social-symbol instagram-symbol">◎</span>
+            <span><strong>Instagram</strong><small>Show, don't just tell.</small></span>
+          </div>
+
+          <div class="floating-note note-linkedin">
+            <span class="social-symbol linkedin-symbol">in</span>
+            <span><strong>LinkedIn</strong><small>Give your expertise a voice.</small></span>
+          </div>
+
+          <div class="art-caption">A CREATIVE STRATEGY, BUILT AROUND YOU.</div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="What SocialSync offers">
+        <div><span>01</span> Understand your business</div>
+        <span class="strip-star">✳</span>
+        <div><span>02</span> Choose your platforms</div>
+        <span class="strip-star">✳</span>
+        <div><span>03</span> Create with purpose</div>
+      </section>
+
+      <section class="intro-section section-pad">
+        <div class="section-heading">
+          <span class="eyebrow">NOT ANOTHER CAPTION GENERATOR</span>
+          <h2>Different businesses.<br><em>Different strategies.</em></h2>
+        </div>
+        <p class="section-intro">
+          A neighbourhood bakery and a B2B software startup shouldn't
+          follow the same content playbook. SocialSync starts with your
+          business, then helps you decide what deserves your time.
+        </p>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-dark">
+            <div class="feature-number">01 / DISCOVER</div>
+            <div class="feature-icon">✳</div>
+            <h3>Find your<br>right-fit platforms.</h3>
+            <p>Tell us what you do, who you serve and what you want to achieve. Get recommendations tailored to your goals.</p>
+            <a href="#business-setup" class="feature-link">Find your fit <span>↗</span></a>
+          </article>
+
+          <article class="feature-card feature-rose">
+            <div class="feature-number">02 / CREATE</div>
+            <div class="feature-icon">↗</div>
+            <h3>Make content<br>with a point of view.</h3>
+            <p>Get post concepts, caption drafts, visual shot lists, carousel structures and video ideas that fit each platform.</p>
+            <a href="strategy.html" class="feature-link">Explore the lab <span>↗</span></a>
+          </article>
+
+          <article class="feature-card feature-cream">
+            <div class="feature-number">03 / PLAN</div>
+            <div class="feature-icon">▦</div>
+            <h3>Turn ideas into<br>a clear next step.</h3>
+            <p>Build a practical content plan around your campaign, available resources and publishing priorities.</p>
+            <a href="strategy.html" class="feature-link">Plan a campaign <span>↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="business-section section-pad" id="business-setup">
+        <div class="business-intro">
+          <span class="eyebrow">FIRST, LET'S TALK BUSINESS</span>
+          <h2>Your business is<br>the <em>starting point.</em></h2>
+          <p>Answer a few quick questions. We'll use your answers to suggest suitable social platforms and content approaches.</p>
+
+          <div class="setup-progress">
+            <div class="progress-track"><span id="setupProgress"></span></div>
+            <div class="progress-label"><span id="progressText">STEP 01 OF 03</span><span id="progressPercent">0%</span></div>
+          </div>
+
+          <div class="setup-aside">
+            <span>✳</span>
+            <p>No need to be everywhere. Start with the platforms that make sense for your audience and goals.</p>
+          </div>
+        </div>
+
+        <div class="setup-card">
+          <div class="setup-card-top">
+            <div>
+              <span class="eyebrow" id="formEyebrow">YOUR BUSINESS PROFILE</span>
+              <h3 id="formTitle">What do you do?</h3>
             </div>
-        </header>
+            <span class="step-counter" id="stepCounter">01 / 03</span>
+          </div>
 
-        <!-- Main Creative Dashboard Layout -->
-        <main class="creative-grid">
-            <!-- Left Side: Input Panel -->
-            <section class="clay-card input-card">
-                <div class="card-headline">
-                    <div class="pill-icon icon-peach"><i class="fa-solid fa-comment-dots"></i></div>
-                    <div>
-                        <h2>Raw Client Voice</h2>
-                        <p class="card-sub">Drop the messy briefs, captions, or voice transcripts here</p>
-                    </div>
-                </div>
-                <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
-                <button class="btn-creative-sync" onclick="generateCreativeMatrix()">
-                    <span>Transform to Campaign Content</span>
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-            </section>
+          <form id="businessForm">
+            <div class="form-step active" data-step="1">
+              <label for="businessName">Brand or business name <span class="optional-label">OPTIONAL</span></label>
+              <input id="businessName" name="businessName" type="text" maxlength="80" placeholder="e.g. The Sunday Bakehouse">
 
-            <!-- Right Side: Visual Output Board -->
-            <section class="clay-card output-card">
-                <div class="card-headline">
-                    <div class="pill-icon icon-berry"><i class="fa-solid fa-border-all"></i></div>
-                    <div>
-                        <h2>Social Channel Matrix</h2>
-                        <p class="card-sub">Your cross-platform automated content stream</p>
-                    </div>
-                </div>
+              <label for="businessType">Which best describes your business?</label>
+              <select id="businessType" name="businessType" required>
+                <option value="">Choose your business type</option>
+                <option value="food">Food, cafe, bakery or restaurant</option>
+                <option value="fashion">Fashion, beauty or lifestyle</option>
+                <option value="local">Local service or neighbourhood business</option>
+                <option value="ecommerce">Online store or e-commerce</option>
+                <option value="b2b">B2B, SaaS or technology startup</option>
+                <option value="professional">Consultant, freelancer or professional service</option>
+                <option value="education">Education, coaching or learning</option>
+                <option value="creator">Creator, artist or personal brand</option>
+                <option value="nonprofit">Nonprofit or community organisation</option>
+                <option value="other">Something else</option>
+              </select>
 
-                <div class="matrix-tabs-row">
-                    <button class="matrix-tab active" id="instaTab" onclick="switchTab('insta')"><i class="fa-brands fa-instagram"></i> Instagram</button>
-                    <button class="matrix-tab" id="linkdTab" onclick="switchTab('linkd')"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
-                </div>
+              <label for="audience">Who are you trying to reach?</label>
+              <select id="audience" name="audience" required>
+                <option value="">Choose your primary audience</option>
+                <option value="consumers">Individual consumers</option>
+                <option value="businesses">Businesses and decision-makers</option>
+                <option value="students">Students and young adults</option>
+                <option value="local">People in my local area</option>
+                <option value="creators">Creators and professional peers</option>
+                <option value="mixed">A mix of audiences</option>
+              </select>
 
-                <div class="workspace-viewport" id="viewportDisplay">
-                    <div class="empty-creative-state">
-                        <i class="fa-solid fa-palette floating-palette"></i>
-                        <p>Awaiting client intake string to spin up your marketing assets...</p>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+              <label for="location">Where do you primarily operate?</label>
+              <select id="location" name="location" required>
+                <option value="">Choose your reach</option>
+                <option value="local">One city or local area</option>
+                <option value="national">Across my country</option>
+                <option value="global">Internationally</option>
+                <option value="online">Online, without a fixed location</option>
+              </select>
+            </div>
 
-    <script>
-        function generateCreativeMatrix() {
-            const display = document.getElementById('viewportDisplay');
-            display.innerHTML = `
-                <div class="instagram-preview-card animate-pop">
-                    <div class="preview-header">
-                        <div class="preview-avatar"><i class="fa-solid fa-store"></i></div>
-                        <div class="preview-user">
-                            <strong>your.client.cafe</strong>
-                            <span>Sponsored • Campaign Node</span>
-                        </div>
-                    </div>
-                    <div class="preview-content-box">
-                        <p>✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
-                        Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
-                        📍 Tag a pastry lover who needs to see this!<br><br>
-                        <span class="instagram-tags">#CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</span>
-                        </p>
-                    </div>
-                    <div class="preview-footer-actions">
-                        <button class="btn-copy-asset" onclick="alert('Strategy copied to clipboard!')"><i class="fa-regular fa-copy"></i> Copy Content Block</button>
-                    </div>
-                </div>
-            `;
-        }
+            <div class="form-step" data-step="2">
+              <p class="field-intro">What would make social media worthwhile for you?</p>
+              <div class="choice-grid">
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="awareness">
+                  <span class="choice-icon">◉</span><strong>Brand awareness</strong><small>Help more people discover us</small>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="leads">
+                  <span class="choice-icon">↗</span><strong>Leads & enquiries</strong><small>Attract potential customers</small>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="sales">
+                  <span class="choice-icon">✳</span><strong>Sales & bookings</strong><small>Turn interest into action</small>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="community">
+                  <span class="choice-icon">◎</span><strong>Build a community</strong><small>Encourage conversations</small>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="authority">
+                  <span class="choice-icon">✎</span><strong>Build credibility</strong><small>Share expertise and results</small>
+                </label>
+                <label class="choice-card">
+                  <input type="checkbox" name="goals" value="recruitment">
+                  <span class="choice-icon">＋</span><strong>Recruitment</strong><small>Attract the right talent</small>
+                </label>
+              </div>
 
-        function switchTab(platform) {
-            document.querySelectorAll('.matrix-tab').forEach(btn => btn.classList.remove('active'));
-            if(platform === 'insta') document.getElementById('instaTab').classList.add('active');
-            if(platform === 'linkd') document.getElementById('linkdTab').classList.add('active');
-        }
-    </script>
+              <label for="resources">What can you realistically create?</label>
+              <select id="resources" name="resources" required>
+                <option value="">Choose your available resources</option>
+                <option value="phone">Phone photos and simple designs</option>
+                <option value="video">Photos, short videos and Reels</option>
+                <option value="team">A team or designer to help create content</option>
+                <option value="text">Mostly writing, insights and text-based content</option>
+                <option value="mixed">A mixture of these</option>
+              </select>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <p class="field-intro">Let's make the recommendations practical.</p>
+
+              <label for="budget">Monthly marketing budget</label>
+              <select id="budget" name="budget" required>
+                <option value="">Choose a budget range</option>
+                <option value="zero">Organic content only</option>
+                <option value="small">Small budget</option>
+                <option value="medium">Moderate budget</option>
+                <option value="large">Larger growth budget</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+
+              <label for="currentPlatforms">Where are you already active?</label>
+              <select id="currentPlatforms" name="currentPlatforms" required>
+                <option value="">Choose your current situation</option>
+                <option value="none">We are just getting started</option>
+                <option value="instagram">Mostly Instagram</option>
+                <option value="linkedin">Mostly LinkedIn</option>
+                <option value="multiple">Several social platforms</option>
+                <option value="other">Another platform or combination</option>
+              </select>
+
+              <label for="challenge">What's your biggest content challenge? <span class="optional-label">OPTIONAL</span></label>
+              <textarea id="challenge" name="challenge" rows="3" maxlength="500" placeholder="e.g. We don't know what to post or which photos to take."></textarea>
+
+              <div class="privacy-note">Your answers are used in this browser to create your initial recommendations. This demo does not send them to an AI service.</div>
+            </div>
+
+            <p class="form-error" id="formError" role="alert" aria-live="polite"></p>
+
+            <div class="form-navigation">
+              <button type="button" class="button button-secondary" id="backButton" hidden>← Back</button>
+              <button type="button" class="button button-primary" id="nextButton">Continue <span>→</span></button>
+              <button type="submit" class="button button-primary" id="submitButton" hidden>Build my strategy <span>↗</span></button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="platform-section section-pad">
+        <div class="platform-heading">
+          <div>
+            <span class="eyebrow">THE RIGHT CHANNELS, NOT ALL CHANNELS</span>
+            <h2>Every platform has<br>its <em>own language.</em></h2>
+          </div>
+          <a class="text-link" href="strategy.html">Explore content formats <span>↗</span></a>
+        </div>
+
+        <div class="platform-preview-grid">
+          <article class="platform-preview">
+            <div class="platform-preview-head"><span class="platform-badge badge-ig">◎</span><span>01 / VISUAL STORYTELLING</span></div>
+            <h3>Instagram</h3>
+            <p>Shot lists, carousel storyboards, Reels concepts, Stories and product photography direction.</p>
+            <div class="format-chips"><span>Carousels</span><span>Reels</span><span>Stories</span></div>
+          </article>
+          <article class="platform-preview">
+            <div class="platform-preview-head"><span class="platform-badge badge-in">in</span><span>02 / PROFESSIONAL VOICE</span></div>
+            <h3>LinkedIn</h3>
+            <p>Founder perspectives, industry insights, case studies, company milestones and document posts.</p>
+            <div class="format-chips"><span>Thought leadership</span><span>Case studies</span></div>
+          </article>
+          <article class="platform-preview">
+            <div class="platform-preview-head"><span class="platform-badge badge-fb">f</span><span>03 / COMMUNITY</span></div>
+            <h3>Facebook</h3>
+            <p>Local updates, community conversations, event announcements and relevant offers.</p>
+            <div class="format-chips"><span>Events</span><span>Community</span></div>
+          </article>
+          <article class="platform-preview">
+            <div class="platform-preview-head"><span class="platform-badge badge-yt">▶</span><span>04 / VIDEO & DISCOVERY</span></div>
+            <h3>YouTube & TikTok</h3>
+            <p>Short-video hooks, educational scripts, product demos and behind-the-scenes ideas.</p>
+            <div class="format-chips"><span>Shorts</span><span>Video scripts</span></div>
+          </article>
+        </div>
+        <p class="platform-disclaimer">These are content examples, not universal performance guarantees. Final platform recommendations depend on your audience, goals, resources and market.</p>
+      </section>
+
+      <section class="closing-banner">
+        <div class="closing-decoration">✳</div>
+        <span class="eyebrow">YOUR NEXT GOOD IDEA STARTS HERE</span>
+        <h2>Less guessing.<br><em>More meaningful content.</em></h2>
+        <a href="#business-setup" class="button button-light">Let's build your strategy <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">S<span>✳</span></span>
+        <span class="brand-name">socialsync<span>studio</span></span>
+      </a>
+      <p>Thoughtful content for businesses finding their voice.</p>
+      <div class="footer-links">
+        <a href="strategy.html">Strategy Lab</a>
+        <a href="how-it-works.html">How it works</a>
+        <a href="#business-setup">Get started ↑</a>
+      </div>
+      <span class="copyright">© 2026 SocialSync Studio · A creative planning demo</span>
+    </footer>
+  </div>
 </body>
 </html>
+
