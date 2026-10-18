@@ -3,52 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SocialSync AI - Micro-Agency Automation Engine</title>
+    <title>SocialSync AI - Enterprise Matrix</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">🚀 SocialSync <span class="badge">AI Node</span></div>
-        <div class="status">Connected to Open-Weight Layer</div>
-    </header>
+    <!-- Ambient Atmospheric Backdrop -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
 
-    <main class="dashboard-container">
-        <!-- Input Section -->
-        <section class="panel input-panel">
-            <h2>1. Client Raw Intake</h2>
-            <p class="subtitle">Paste the messy, raw client brief or audio transcript below:</p>
-            <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
-            <button class="btn-primary" onclick="simulateAutomation()">Process & Sync Content</button>
-        </section>
-
-        <!-- Structured Outputs Section -->
-        <section class="panel output-panel">
-            <h2>2. Automated Agency Matrix</h2>
-            
-            <div class="tabs">
-                <div class="tab active">Instagram Caption</div>
-                <div class="tab">LinkedIn Sync</div>
-                <div class="tab">Content Schedule</div>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-glyph"><i class="fa-solid fa-circle-nodes"></i></div>
+                <span>SocialSync <span class="brand-glow">AI</span></span>
             </div>
-
-            <div class="output-box" id="outputContent">
-                <p class="placeholder-text">Click "Process & Sync Content" to parse raw brief into structured open-source modules...</p>
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active"><i class="fa-solid fa-square-poll-horizontal"></i> Sync Terminal</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-calendar-days"></i> Content Calendar</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-robot"></i> Model Topology</a>
+                <a href="#" class="menu-item"><i class="fa-solid fa-network-wired"></i> Channel Nodes</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="node-status-pill">
+                    <span class="pulse-core"></span>
+                    <span>Gemma-2B Local Cluster</span>
+                </div>
             </div>
-        </section>
-    </main>
+        </aside>
+
+        <!-- Main Workspace -->
+        <div class="workspace">
+            <header class="workspace-header">
+                <div class="header-title-block">
+                    <h1>Automated Agency Terminal</h1>
+                    <p>Convert disorganized client strings into fully synchronized social campaigns instantly.</p>
+                </div>
+                <div class="network-indicators">
+                    <i class="fa-brands fa-instagram platform-node active"></i>
+                    <i class="fa-brands fa-linkedin platform-node active"></i>
+                    <i class="fa-brands fa-tiktok platform-node active"></i>
+                </div>
+            </header>
+
+            <main class="dashboard-grid">
+                <!-- Intake Card -->
+                <section class="glass-card intake-card">
+                    <div class="card-title-bar">
+                        <div class="icon-orb orb-purple"><i class="fa-solid fa-arrow-down-short-wide"></i></div>
+                        <div>
+                            <h2>1. Clean Feed Intake</h2>
+                            <p class="card-desc">Input messy briefs or client recordings</p>
+                        </div>
+                    </div>
+                    <textarea id="rawBrief" placeholder="Example: hey tamanna we are doing 20% off on pastries this saturday morning at our cafe from 8am to noon, tell families to come down and grab croissants..."></textarea>
+                    <button class="btn-action-glow" onclick="executeSyncPipeline()">
+                        <span>Compile & Sync Across Nodes</span>
+                        <i class="fa-solid fa-shuffle"></i>
+                    </button>
+                </section>
+
+                <!-- Output Matrix Card -->
+                <section class="glass-card matrix-card">
+                    <div class="card-title-bar">
+                        <div class="icon-orb orb-blue"><i class="fa-solid fa-diagram-project"></i></div>
+                        <div>
+                            <h2>2. Synced Platform Matrix</h2>
+                            <p class="card-desc">Real-time localized compilation outputs</p>
+                        </div>
+                    </div>
+                    
+                    <div class="matrix-tabs">
+                        <button class="tab-button active" onclick="switchMatrixTab(event, 'insta')"><i class="fa-brands fa-instagram"></i> Instagram</button>
+                        <button class="tab-button" onclick="switchMatrixTab(event, 'linkd')"><i class="fa-brands fa-linkedin"></i> LinkedIn</button>
+                    </div>
+
+                    <div class="matrix-viewport" id="matrixOutput">
+                        <div class="visual-placeholder">
+                            <i class="fa-solid fa-satellite-dish radar-pulse"></i>
+                            <p>Awaiting intake stream authorization parameters...</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
 
     <script>
-        function simulateAutomation() {
-            const output = document.getElementById('outputContent');
-            output.innerHTML = `
-                <div class="result-card">
-                    <h3>📸 Instagram Strategy (Engagement Focus)</h3>
-                    <p>✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
-                    Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
-                    📍 Tag a pastry lover who needs to see this!<br><br>
-                    #CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</p>
+        function executeSyncPipeline() {
+            const viewport = document.getElementById('matrixOutput');
+            viewport.innerHTML = `
+                <div class="deployment-module animate-slide-up">
+                    <div class="deployment-header">
+                        <span class="channel-route"><i class="fa-brands fa-instagram"></i> /root/instagram_feed</span>
+                        <span class="token-metric">Optimal Weight Balance</span>
+                    </div>
+                    <div class="deployment-body">
+                        <p class="compiled-caption">
+                            ✨ <strong>Weekend Plans? Sorted.</strong> ✨<br><br>
+                            Looking for the perfect Saturday morning vibe? Bring the whole family down to our cafe this weekend! We are slashing <strong>20% OFF</strong> all pastries from 8:00 AM to 12:00 PM. Yes, including our signature buttery croissants! 🥐☕<br><br>
+                            📍 Tag a pastry lover who needs to see this!<br><br>
+                            <span class="hashtag-highlight">#CafeVibes #PastryLovers #WeekendDiscount #LocalBakery #CroissantLove</span>
+                        </p>
+                    </div>
+                    <div class="deployment-actions">
+                        <button class="btn-secondary" onclick="alert('Asset copied to clipboard!')"><i class="fa-regular fa-copy"></i> Copy Strategy</button>
+                    </div>
                 </div>
             `;
+        }
+
+        function switchMatrixTab(event, nodeType) {
+            const tabs = document.querySelectorAll('.tab-button');
+            tabs.forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active');
         }
     </script>
 </body>
