@@ -223,15 +223,64 @@ Create the campaign plan now.
       }
     );
 
-    if (!response.ok) {
-      // Keep provider details and credentials out of public error messages.
-      console.error("Inference provider returned status:", response.status);
+   if (!response.ok) {
+  console.error("Inference provider returned status:", response.status);
 
-      return res.status(502).json({
-        error:
-          "The AI provider could not complete this request. Please try again shortly."
-      });
-    }
+  const fallbackCampaign = [
+    "1. Campaign angle",
+    `Create a ${goal} campaign for ${businessName?.trim() || businessType}, aimed at ${audience}.`,
+    "",
+    "2. Three opening hooks",
+    `• Looking for a better approach to ${campaignBrief.trim()}?`,
+    `• Here's something worth knowing about ${businessType}.`,
+    `• Your next step starts with finding what works for you.`,
+    "",
+    "3. Recommended format",
+    platform === "tiktok" || platform === "youtube"
+      ? "Use a short vertical video with a clear opening hook, 2–3 key points, and a closing call to action."
+      : platform === "linkedin"
+      ? "Use a professional text post or document carousel with a useful takeaway."
+      : platform === "whatsapp"
+      ? "Use a concise, respectful message with the key details and a clear next step."
+      : "Use a clean visual post or carousel with one clear message and a readable caption.",
+    "",
+    "4. Ready-to-edit draft",
+    campaignBrief.trim(),
+    "",
+    `At ${businessName?.trim() || "our business"}, we aim to make the experience useful for our customers.`,
+    offerDetails?.trim() ? `Details: ${offerDetails.trim()}` : "Add verified product or service details here before publishing.",
+    "",
+    "5. Visual direction",
+    "Use a simple layout, authentic visuals, readable text, and one main message.",
+    "",
+    "6. Shot list or content structure",
+    "1. Introduce the customer need.",
+    "2. Present the product, service, or idea.",
+    "3. Explain a relevant benefit using verified information.",
+    "4. End with the next step.",
+    "",
+    "7. Call to action",
+    goal === "sales"
+      ? "Explore the offer or contact the business for details."
+      : goal === "leads"
+      ? "Get in touch to learn more."
+      : goal === "community"
+      ? "Share your thoughts or questions."
+      : "Learn more and join the conversation.",
+    "",
+    "8. Before publishing",
+    "Check all factual claims, add any missing business details, and review the final content.",
+    `Requested tone: ${tone?.trim() || "Friendly and professional"}`,
+    "",
+    "Demo fallback: The AI provider was unavailable, so this draft uses a basic template and has not been AI-generated."
+  ].join("\n");
+
+  return res.json({
+    campaign: fallbackCampaign,
+    platform,
+    fallback: true
+  });
+}
 
     const data = await response.json();
     const content = data.choices?.[0]?.message?.content;
