@@ -17,15 +17,17 @@ app.disable("x-powered-by");
 app.use(helmet());
 app.use(express.json({ limit: "20kb" }));
 
-if (FRONTEND_ORIGIN) {
-  app.use(
-    cors({
-      origin: FRONTEND_ORIGIN,
-      methods: ["GET", "POST"],
-      allowedHeaders: ["Content-Type"]
-    })
-  );
-}
+app.use(
+  cors({
+    origin: [
+      "https://tam-ato.github.io",
+      "http://localhost:5500"
+    ],
+    methods: ["GET", "POST", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+    optionsSuccessStatus: 204
+  })
+);
 
 const requestCounts = new Map();
 const WINDOW_MS = 60_000;
