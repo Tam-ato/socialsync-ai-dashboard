@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#35121c">
+  <meta name="description" content="Explore social platform recommendations and plan platform-specific content with SocialSync Studio.">
+  <title>Strategy Lab — SocialSync Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+  <script src="strategy.js" defer></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="SocialSync Studio home">
+        <span class="brand-mark">S<span>✳</span></span>
+        <span class="brand-name">socialsync<span>studio</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Studio</a>
+        <a class="nav-link active" href="strategy.html">Strategy Lab</a>
+        <a class="nav-link" href="how-it-works.html">How it works</a>
+      </nav>
+      <a class="header-cta" href="index.html#business-setup">Edit business profile <span>↗</span></a>
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main>
+      <section class="inner-hero">
+        <span class="eyebrow"><span class="status-dot"></span> YOUR IDEAS, WITH A PLAN</span>
+        <h1>Welcome to your<br><em>Strategy Lab.</em></h1>
+        <p>Start with the platforms that fit your business. Then turn a brief, launch or everyday idea into a practical set of content directions.</p>
+      </section>
+
+      <section class="inner-content">
+        <span class="eyebrow">YOUR BUSINESS SNAPSHOT</span>
+        <h2 id="businessGreeting">Let's find your starting point.</h2>
+        <p id="businessSummary">Complete the business questionnaire on the Studio page to get a personalised platform shortlist. You can also explore the sample content planner below.</p>
+        <div id="recommendationResults" class="recommendation-list" aria-live="polite"></div>
+        <div id="exploreLater"></div>
+        <p><a class="button button-primary" href="index.html#business-setup">Complete or update my profile ↗</a></p>
+      </section>
+
+      <section class="strategy-workspace">
+        <span class="eyebrow">THE CAMPAIGN WORKBENCH</span>
+        <h2>One brief. A clearer plan.</h2>
+        <p>Describe what you want to promote. The demo will turn your input into an editable starting outline using your selected platforms.</p>
+
+        <form class="strategy-form" id="campaignForm">
+          <label for="campaignName">Campaign or product name</label>
+          <input id="campaignName" name="campaignName" maxlength="100" placeholder="e.g. Our new summer menu" required>
+
+          <label for="campaignObjective">What should this campaign achieve?</label>
+          <select id="campaignObjective" name="campaignObjective" required>
+            <option value="">Choose an objective</option>
+            <option value="awareness">Introduce something new</option>
+            <option value="leads">Generate enquiries</option>
+            <option value="sales">Encourage purchases or bookings</option>
+            <option value="community">Start conversations</option>
+            <option value="authority">Share expertise</option>
+          </select>
+
+          <label for="campaignAudience">Who is this campaign for?</label>
+          <input id="campaignAudience" name="campaignAudience" maxlength="160" placeholder="e.g. Local families, first-time buyers" required>
+
+          <label for="campaignDetails">Tell us about the offer, idea or story</label>
+          <textarea id="campaignDetails" name="campaignDetails" rows="4" maxlength="1500" placeholder="Include useful details, key benefits, dates or a customer problem. Avoid private customer information." required></textarea>
+
+          <label for="campaignPlatforms">Which platform should we plan for?</label>
+          <select id="campaignPlatforms" name="campaignPlatforms" required>
+            <option value="recommended">Use my recommended platforms</option>
+            <option value="instagram">Instagram</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="facebook">Facebook</option>
+            <option value="tiktok">TikTok</option>
+            <option value="youtube">YouTube</option>
+            <option value="pinterest">Pinterest</option>
+            <option value="google">Google Business Profile</option>
+            <option value="whatsapp">WhatsApp Business</option>
+          </select>
+
+          <button type="submit" class="button button-primary">Build my campaign outline ↗</button>
+          <p id="campaignError" class="form-error" role="alert"></p>
+        </form>
+
+        <div id="campaignResults" class="strategy-result" aria-live="polite"></div>
+      </section>
+
+      <section class="inner-content">
+        <span class="eyebrow">A LITTLE CREATIVE DIRECTION</span>
+        <h2>Give every post a reason to exist.</h2>
+        <div class="inner-grid">
+          <article class="inner-card">
+            <span class="card-index">01 / THE VISUAL</span>
+            <h3>Show the story.</h3>
+            <p>Plan the opening image, supporting shots, framing, lighting and the sequence that makes a carousel easy to follow.</p>
+          </article>
+          <article class="inner-card">
+            <span class="card-index">02 / THE MESSAGE</span>
+            <h3>Say something useful.</h3>
+            <p>Give the audience a helpful insight, an answer, a demonstration or a reason to care beyond a generic sales pitch.</p>
+          </article>
+          <article class="inner-card">
+            <span class="card-index">03 / THE NEXT STEP</span>
+            <h3>Make it actionable.</h3>
+            <p>Choose a relevant next step: learn more, ask a question, visit, enquire, book or explore the product.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark">S<span>✳</span></span>
+          <span class="brand-name">socialsync<span>studio</span></span>
+        </a>
+        <p>Thoughtful content for businesses finding their voice.</p>
+        <div class="footer-links">
+          <a href="index.html">Studio</a>
+          <a href="how-it-works.html">How it works</a>
+        </div>
+        <span class="copyright">© 2026 SocialSync Studio · A creative planning demo</span>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
